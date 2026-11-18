@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=ps5emu
+Comment=Experimental console emulator skeleton with a launcher
+Exec=ps5emu
+Icon=ps5emu
+Categories=Game;Emulator;
+Terminal=false
+StartupWMClass=ps5emu
