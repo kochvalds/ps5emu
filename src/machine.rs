@@ -45,7 +45,7 @@ pub fn run(mem: &mut Memory, entry: u64, max_steps: u64, echo: bool, trace: bool
 pub fn load_demo(mem: &mut Memory) -> u64 {
     let msg = b"Hello from ps5emu!\n";
     mem.write_bytes(0x2000, msg).unwrap();
-    let code: [u8; 32] = [
+    let code = [
         0xB8, 4, 0, 0, 0, //             mov eax, SYS_write
         0xBF, 1, 0, 0, 0, //             mov edi, 1
         0xBE, 0x00, 0x20, 0, 0, //       mov esi, 0x2000

@@ -284,10 +284,10 @@ impl Launcher {
                 p.rect_stroke(
                     tile.expand(gf * 3.0),
                     22.0 + gf * 3.0,
-                    Stroke::new(3.0, Color32::from_white_alpha((70.0 * sel / gf) as u8)),
+                    Stroke::new(3.0_f32, Color32::from_white_alpha((70.0 * sel / gf) as u8)),
                 );
             }
-            p.rect_stroke(tile, 22.0, Stroke::new(3.0, Color32::from_white_alpha((255.0 * sel) as u8)));
+            p.rect_stroke(tile, 22.0, Stroke::new(3.0_f32, Color32::from_white_alpha((255.0 * sel) as u8)));
 
             // глиф плитки
             let c = tile.center();
@@ -360,7 +360,7 @@ impl Launcher {
             vec2(rect.width() * 0.8, rect.height() * 0.62),
         );
         p.rect_filled(panel, 16.0, Color32::from_rgba_unmultiplied(0, 0, 0, 200));
-        p.rect_stroke(panel, 16.0, Stroke::new(1.5, Color32::from_white_alpha(50)));
+        p.rect_stroke(panel, 16.0, Stroke::new(1.5_f32, Color32::from_white_alpha(50)));
         let x = panel.left() + 28.0;
         let mut y = panel.top() + 24.0;
         let head = p.text(
@@ -406,7 +406,7 @@ impl Launcher {
         let p = ui.painter().clone();
         let panel = Rect::from_center_size(rect.center() + vec2(0.0, 20.0), vec2(rect.width() * 0.7, rect.height() * 0.6));
         p.rect_filled(panel, 16.0, Color32::from_rgba_unmultiplied(0, 0, 0, 190));
-        p.rect_stroke(panel, 16.0, Stroke::new(1.5, Color32::from_white_alpha(50)));
+        p.rect_stroke(panel, 16.0, Stroke::new(1.5_f32, Color32::from_white_alpha(50)));
         let text = format!(
             "ps5emu v{}\n\n\
              Учебный каркас эмулятора: интерпретатор подмножества x86-64,\n\
